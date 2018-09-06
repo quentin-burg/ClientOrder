@@ -13,9 +13,9 @@ public class Order {
 		this.amount = amount;
 	}
 	
-	public void setClient(Client c) {
-		this.client = c;
-	}
+//	public void setClient(Client c) {
+//		this.client = c;
+//	}
 	
 	public Client getClient() {
 		return this.client;
