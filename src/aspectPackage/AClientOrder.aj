@@ -2,6 +2,7 @@ package aspectPackage;
 
 import client.Client;
 import order.Order;
+import order.Orders;
 
 public aspect AClientOrder {
 

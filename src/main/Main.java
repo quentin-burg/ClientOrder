@@ -14,7 +14,6 @@ public class Main {
 		Client c2 = new Client("titi", "tototown");
 		Order o1 = new Order(12, 90.3);
 		Order o2 = new Order(3, 43.1);
-		
 		c2.addOrder(o1);
 		
 		clients.addClient(c1);

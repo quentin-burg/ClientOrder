@@ -13,11 +13,9 @@ public class Orders {
 	
 	public void addOrder(Order o) {
 		orders.add(o);
-		System.out.println("The order has been added");
 	}
 	
 	public void delOrder(Order o) {
 		orders.remove(o);
-		System.out.println("The order has been deleted");
 	}
 }

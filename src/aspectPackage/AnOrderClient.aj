@@ -5,6 +5,7 @@ import java.util.List;
 
 import client.Client;
 import order.Order;
+import client.Clients;
 
 public aspect AnOrderClient {
 
@@ -30,11 +31,11 @@ public aspect AnOrderClient {
 	}
 	
 	pointcut delClientIfNoOrder(Client c):
-		call (void Clients.delOrder(Client))
+		call (void Clients.delclient(Client))
 		&& args(c);
 	
 	Object around (Client c): delClientIfNoOrder(c){
-		System.out.println(c.hasOrder());
+		System.out.println("The client has an order ? " + c.hasOrder());
 		if (c.hasOrder()) {
 			System.out.println("The client can't be deleted");
 			c.printOrders();
