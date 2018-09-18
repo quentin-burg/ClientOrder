@@ -23,7 +23,7 @@ public aspect AClientOrder {
 	before (Order o): delClientOrder(o){
 		if (o.getClient() != null) {
 			o.getClient().delOrder(o);
-			System.out.println("The order has been deleted");
+			//System.out.println("The order has been deleted");
 		}
 	}
 	
@@ -34,7 +34,7 @@ public aspect AClientOrder {
 	before (Order o): addClientOrder(o){
 		if (o.getClient() != null) {
 			o.getClient().addOrder(o);
-			System.out.println("The order has been added");
+			//System.out.println("The order has been added");
 		}
 	}
 }

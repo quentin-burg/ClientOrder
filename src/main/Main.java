@@ -18,7 +18,7 @@ public class Main {
 		
 		clients.addClient(c1);
 		clients.addClient(c2);
-		
+		 
 		orders.addOrder(o1);
 		orders.addOrder(o2);
 		

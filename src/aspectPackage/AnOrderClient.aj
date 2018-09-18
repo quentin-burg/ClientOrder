@@ -26,7 +26,7 @@ public aspect AnOrderClient {
 	
 	public void Client.printOrders(){
 		for (Order o : orders) {
-			System.out.println("Order number " + o.id + " amount: " + o.amount + " from client " + this);
+			//System.out.println("Order number " + o.id + " amount: " + o.amount + " from client " + this);
 		}
 	}
 	
@@ -35,13 +35,13 @@ public aspect AnOrderClient {
 		&& args(c);
 	
 	Object around (Client c): delClientIfNoOrder(c){
-		System.out.println("The client has an order ? " + c.hasOrder());
+		//System.out.println("The client has an order ? " + c.hasOrder());
 		if (c.hasOrder()) {
-			System.out.println("The client can't be deleted");
-			c.printOrders();
+			//System.out.println("The client can't be deleted");
+			c.printOrders(); 
 		}
 		else {
-			System.out.println("The client has been deleted");
+			//System.out.println("The client has been deleted");
 			proceed(c);
 		}
 		return c;
